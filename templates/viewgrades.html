@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tab title + CSS stylesheets -->
+    <title>View Grades | Grades System Inc.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+    <link rel="stylesheet" href="/static/format.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body class="background">
+    <!-- Header for a navigation bar -->
+    <header class="header" id="header">
+      <img src="/static/images/logo.png" alt="Grades System Inc." class ="logo">
+      <div class="header-right">
+        <a class="active">View Grades</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/teacherpanel/">Panel</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/logout">Logout</a>
+      </div>
+    </header>
+		<div class="container">
+		  <h3 class="h3">Select Class</h3>
+		  <select class="form-control form-control-lg" id="classViewGrades">
+		  		<option id="null"> ... </option>
+		  		{% for class in classes %}
+		  		<option id="{{class[0]}}"> {{class[1]}} </option>
+		  		{% endfor %}
+		  </select>
+		  <h3 class="h3">Select Exam</h3>
+		  <select class="form-control form-control-lg" id="examViewGrades">
+		  	<option id="null"> ... </option>
+		  </select>
+      <!-- creating table for data inserts -->
+		  <table table class="w3-table-all" id="tblClassTable">
+		    <caption class="tableTitle">Class Table</caption>
+		    <tbody><tr>
+		    	<th>Student name</th>
+		    	<th>Student surname</th>
+		    	<th>Exam mark</th>
+		    	</tr>
+		    </tbody>
+		  </table>
+		</div>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <a class = "footer-left">Logged in as {{g.user.fullname}}</a>
+      <div class="footer-right">
+        <img src="/static/images/smalllogo.png" alt="Logo" class="footerimg">
+        <a href="mailto:contact@gradesysteminc.com">Contact us</a>
+        <a href="#header">To the top</a>
+      </div>
+    </footer>
+    <!-- JS script -->
+    <script src="/static/scripts/viewgrades.js"></script>
+  </body>
+</html>

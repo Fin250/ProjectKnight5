@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tab title + CSS stylesheets -->
+    <title>Edit Grades | Grades System Inc.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+    <link rel="stylesheet" href="/static/format.css">
+  </head>
+  <body class="background">
+    <!-- Header for a navigation bar -->
+    <header class="header" id="header">
+      <img src="/static/images/logo.png" alt="Grades System Inc." class ="logo">
+      <div class="header-right">
+        <a class="active">Edit Grades</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/teacherpanel/">Panel</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/logout">Logout</a>
+      </div>
+    </header>
+    <div class="container">
+		  <h3>Select Student</h3>
+		   <select id="studentEditGrades">
+		   	<option id="null"> ... </option>
+         <!-- loops over students for full names + using jinja to pass data from flask into html on load -->
+		   	{% for student in students %}
+		   	<option id="{{student[0]}}"> {{student[1]+' '+ student[2]}} </option>
+		   	{% endfor %} -->
+        </select>
+		  <h3>Select Exam</h3>
+      <select id="examEditGrades">
+		    <option id="null"> ... </option>
+		    {% for exam in exams %}
+		    <option id ={{exam[0]}}> {{exam[1]}} </option>
+		    {% endfor %}
+		  </select>
+      <br>
+      <label for="mark">
+        <b>Update Mark</b>
+      </label>
+      <input id="updatedMark" type="number" min="0" max="100" placeholder="Enter Mark" name="mark" maxlength="3" required>
+      <label for="feedback">
+        <b>Update Feedback</b>
+      </label>
+      <br>
+      <textarea id="updateFeedback" name="feedback" cols="200" rows="5" placeholder=" Enter Feedback" required></textarea>
+      <button class="submitbutton" id="btnUpdateGrade" type="submit">Update Grade</button>
+      <button class="submitbutton" id="btnDeleteGrade" type="submit">Delete Grade</button>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <a class = "footer-left">Logged in as {{g.user.fullname}}</a>
+      <div class="footer-right">
+        <img src="/static/images/smalllogo.png" alt="Logo" class="footerimg">
+        <a href="mailto:contact@gradesysteminc.com">Contact us</a>
+        <a href="#header">To the top</a>
+      </div>
+    </footer>
+    <!-- JS script -->
+    <script src="/static/scripts/editgrades.js"></script>
+  </body>
+</html>

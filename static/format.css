@@ -1,0 +1,589 @@
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+summary {
+  display: list-item;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  padding: 30px;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+  font: inherit;
+  font-family: Garamond, serif;
+  margin: 0;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+button,
+input {
+  display: block;
+  overflow: visible;
+}
+
+select {
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  width: 35%;
+  border: 2px solid #6b6b6b;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #505358;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+  color: #5a667f;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+html,
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Style for h1 tag */
+h1 {
+  font-size: 36px;
+  display: table;
+  margin: 0 auto;
+}
+
+/* Style for h2 tag */
+h2 {
+  font-size: 30px;
+}
+
+/* Style for h3 tag */
+h3 {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+/* Style for h4 tag */
+h4 {
+  font-size: 20px;
+}
+
+/* Style for h5 tag */
+h5 {
+  font-size: 18px;
+}
+
+/* Style for h6 tag */
+h6 {
+  font-size: 16px;
+}
+
+/* Style for number entry */
+.numentry {
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+  width: 20%;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  color: #000000 !important;
+  background-color: #8d8181 !important;
+  overflow: hidden;
+  padding: 20px 10px;
+  border: 2px solid #575757;
+}
+
+/* Background colour */
+.background {
+  color: #000000 !important;
+  background-color: #ededed !important;
+}
+
+/* Style the footer with a grey background and some padding */
+.footer {
+  color: #000000 !important;
+  background-color: #8d8181 !important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: 2px solid #575757;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the footer links */
+.footer a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Header logo */
+img.logo {
+  width: 20%;
+  margin-left: 15px;
+}
+
+/* Changes header button colour when hovered on */
+.header-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Changes footer button colour when hovered on */
+.footer-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Changes header button colour when active */
+.header-right a.active {
+  background-color: #646464;
+  color: white;
+}
+
+/* Changes footer button colour when active */
+.footer-right a.active {
+  background-color: #646464;
+  color: white;
+}
+
+/* Floats header right to the right */
+.header-right {
+  float: right;
+}
+
+/* Floats footer right to the right */
+.footer-right {
+  float: right;
+}
+
+/* Floats footer-right a element to the right */
+.footer-right a {
+  float: right;
+}
+
+/* Styling for the left footer */
+.footer-left {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Change styles for header and footer on small screens */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .footer a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  .footer-right {
+    float: none;
+  }
+}
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Small-width inputs */
+input[type="smalltext"] {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Small-width inputs */
+input[type="number"] {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.submitbutton {
+  background-color: #6e6e6e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Set a style for round buttons */
+.roundbutton {
+  border-radius: 25px;
+  background-color: #6e6e6e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 10%;
+  border-radius: 20%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Image formatting for the logo in the footer */
+.footerimg {
+  padding-top: 10px;
+  width: 10%;
+  margin-right: 30px;
+  margin-left: 10px;
+  float: right;
+}
+
+/* Image formatting for the logo in the login footer */
+.loginfooterimg {
+  padding-top: 10px;
+  width: 20%;
+  margin-right: 10px;
+  margin-left: 30px;
+  float: left;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #6c777f;
+  color: white;
+  display: block;
+  padding-right: 80px;
+  padding-left: 80px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* Formats the buttons containing links */
+.linkbutton {
+  background-color: #6e6e6e;
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Formatting for teacher panel button icons */
+.panelicons {
+  width: 15%;
+}
+
+.panelcontainer {
+  padding: 16px;
+  margin-top: 5px;
+  margin-bottom: 100px;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #4a4a4a;
+  color: white;
+  border: 2px solid #000000;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/* View grades table caption*/
+.tableTitle {
+  caption-side: top;
+  text-align: center;
+}
+
+/* Button group */
+.btn-group button {
+  background-image: linear-gradient(to bottom right, #6e6e6e, #494646);
+  color: white;
+  font-size: 30px;
+  border-radius: 25px;
+  padding: 35px 18px;
+  margin: 5px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  float: left;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tab title + CSS stylesheets -->
+    <title>Edit Exams | Grades System Inc.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+    <link rel="stylesheet" href="/static/format.css">
+  </head>
+  <body class="background">
+    <!-- Header for a navigation bar -->
+    <header class="header" id="header">
+      <img src="/static/images/logo.png" alt="Grades System Inc." class ="logo">
+      <div class="header-right">
+        <a class="active">Edit Grades</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/teacherpanel/">Panel</a>
+        <a href="https://2223-software-engineering.fsweet.repl.co/logout">Logout</a>
+      </div>
+    </header>
+    <div class="container">
+      <h3>Select exam class</h3>
+      <select id="examClass">
+        <option id="null"> ... </option>
+        <!-- loops over classes for names + using jinja to pass data from flask into html on load -->
+        {% for class in classes %}
+          <option id="{{class[0]}}"> {{class[1]}}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <h3>Select Exam</h3>
+      <select id="examTitle"></select>
+      <br>
+      <label for="examName">
+        <b>Exam Title</b>
+      </label>
+      <input id="examName" type="text" placeholder="Edit Exam Title" name="examTitle" required>
+      <br>
+      <h3>Exam Set Date</h3>
+      <input type="date" id="examSetDate" ></input>
+      <br>
+      <h3>Exam Due Date</h3>
+      <input id="examDueDate" type="date"></input>
+      <br>
+      <label for="totalMarks">
+        <b>Exam Total Marks</b>
+      </label>
+      <input id="examTotalMarks" type="number" placeholder="Edit Total Marks" name="examTitle" min="1" max="100" required>
+      <br>
+      <label for="examWeight">
+        <b>Exam Weight (%)</b>
+      </label>
+      <input id="examWeight" type="number" placeholder="Edit Exam Weight" name="examTitle" min="1" max="100" required>
+      <button class="submitbutton" id="btnEditExam" type="submit">Update Exam</button>
+      <button class="submitbutton" id="btnDeleteExam" type="submit">Delete Exam</button>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <a class = "footer-left">Logged in as {{g.user.fullname}}</a>
+      <div class="footer-right">
+        <img src="/static/images/smalllogo.png" alt="Logo" class="footerimg">
+        <a href="mailto:contact@gradesysteminc.com">Contact us</a>
+        <a href="#header">To the top</a>
+      </div>
+    </footer>
+    <!-- JS script -->
+    <script src="/static/scripts/editexams.js"></script>
+  </body>
+</html>
