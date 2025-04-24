@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Yoga - Luna Moth{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Explore yoga as a path to inner connection and body wisdom with Luna Moth’s soulful practices." />
+{% endblock %}
+
+{% block og_title %}Yoga | Luna Moth{% endblock %}
+{% block og_description %}Join grounding, nourishing yoga rooted in feminine awareness and embodied healing.{% endblock %}
+
+{% block twitter_title %}Feminine Yoga | Luna Moth{% endblock %}
+{% block twitter_description %}Practice yoga as a sacred return to the body. Explore feminine-centered flows and breathwork.{% endblock %}
+
+{% block content %}
+    <section class="yoga-section">
+        <!-- Image Slideshow -->
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='images/yoga/Yoga1.jpg') }}" alt="Yoga Image 1">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='images/yoga/Yoga2.jpg') }}" alt="Yoga Image 2">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('static', filename='images/yoga/Yoga3.jpg') }}" alt="Yoga Image 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Yoga Content Section -->
+        <div class="yoga-content">
+            <h2>Find Balance Through Yoga</h2>
+            <p>Yoga as a method to manage menopause <br><br>Following a 30-hour Menoyoga™ training, as an add-on to my existing long-term yoga practice, I can offer solar and lunar sequences specifically designed to balance the nervous system and develop strength.</p>
+            <img src="{{ url_for('static', filename='images/Yoga_badge.png') }}" alt="Yoga badge" class="yoga-badge">
+            <p>As cyclical beings, our bodies need different types of nourishment and movement at different stages of our cycle, and across the arc of the menopause transition. These sessions provide adapted postural guidance in-line with the Menoyoga™ trainings and work in-line with the body's changes in collagen, nervous system challenges and muscle strength. They offer a combination of cooling yin asanas and balance of yang yoga practices. This will help ease overstimulation of the parasympathetic nervous system which can lead to too much heat in the body which can present itself as irritablity, poor concentration, anger, frustration and physical inflammation.</p>
+            <img src="{{ url_for('static', filename='images/Lisa Vernelle Menoyoga Certificate-1.png') }}" alt="Yoga certificate" class="yoga-cert">
+            <!-- Booking Section -->
+            <section id="booking" class="booking-section">
+                <h2>✧◈ Book a Session ◈✧</h2>
+                <p>If you’re ready to get started or have any questions, please feel free to book a session with me using the link below.</p>
+                <a href="{{ url_for('bookings') }}" class="btn-book">Book Now</a>
+            </section>
+        </div>
+    </section>
+
+    <!-- Slideshow Script -->
+<script>
+    let slideIndex = 0;
+    function showSlides() {
+        const slides = document.querySelectorAll(".slide");
+        slides.forEach((slide, index) => {
+            slide.classList.remove("active");
+            if (index === slideIndex) {
+                slide.classList.add("active");
+            }
+        });
+
+        slideIndex = (slideIndex + 1) % slides.length;
+        setTimeout(showSlides, 10000);
+    }
+
+    document.addEventListener("DOMContentLoaded", showSlides);
+</script>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Tarot Readings - Luna Moth{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Receive intuitive tarot guidance from Lisa. Grounded in menstrual wisdom and feminine archetypes." />
+{% endblock %}
+
+{% block og_title %}Intuitive Tarot | Luna Moth{% endblock %}
+{% block og_description %}Book a tarot session with Lisa—explore insight and inner clarity guided by intuition.{% endblock %}
+
+{% block twitter_title %}Tarot Readings – Luna Moth{% endblock %}
+{% block twitter_description %}Insightful tarot rooted in feminine wisdom and spiritual reflection.{% endblock %}
+
+{% block content %}
+    <section class="tarot-section">
+        <h1>Tarot Readings</h1>
+
+        <!-- Tarot Image -->
+        <div class="tarot-image">
+            <img src="{{ url_for('static', filename='images/Tarot.jpg') }}" alt="Tarot Cards">
+        </div>
+
+        <!-- Tarot Description -->
+        <p class="tarot-text">
+            Private face-to-face and online intuitive readings of up to 1 hour – <strong>£30</strong>.  
+            <br>If you refer a friend, any future readings for you are <strong>£25</strong> as a thank you. 🙏
+        </p>
+    </section>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Luna Moth{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Explore articles on cycle wisdom, conscious living, and feminine empowerment from Luna Moth." />
+{% endblock %}
+
+{% block og_title %}Blog | Luna Moth{% endblock %}
+{% block og_description %}Dive into the Luna Moth blog: reflections on cycles, embodiment, and conscious living.{% endblock %}
+
+{% block twitter_title %}Blog – Luna Moth Wisdom{% endblock %}
+{% block twitter_description %}Explore writing on menstruality, intuition, and cyclical living with Luna Moth.{% endblock %}
+
+{% block content %}
+    <div class="subscribe-container">
+        <a href="https://lisalunamoth.substack.com/subscribe" target="_blank" class="subscribe-button">
+            Subscribe to My Newsletter
+        </a>
+    </div>
+
+    <h2>Latest Blog Posts</h2>
+    
+    <div class="blog-container">
+        {% for post in posts %}
+            <div class="blog-card">
+                <a href="{{ post.link }}" target="_blank">
+                    <img src="{{ post.image }}" alt="Blog Image" onerror="this.onerror=null; this.src='/static/images/placeholder_default.jpg';">
+                </a>
+                <div class="blog-content">
+                    <h3><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h3>
+                    <p class="blog-date">{{ post.published }}</p>
+                    <p class="blog-excerpt">{{ post.excerpt | safe }}</p>
+                    <a href="{{ post.link }}" class="read-more" target="_blank">Read More →</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="{{ url_for('blog', page=page-1) }}" class="prev">Previous</a>
+        {% endif %}
+        
+        <span>Page {{ page }} of {{ total_pages }}</span>
+
+        {% if page < total_pages %}
+            <a href="{{ url_for('blog', page=page+1) }}" class="next">Next</a>
+        {% endif %}
+    </div>
+{% endblock %}

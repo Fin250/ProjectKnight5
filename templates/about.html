@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}About Me - Luna Moth{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Lisa is a Red School-trained menstruality mentor and yoga guide based in Worthing, supporting women's cyclical wellbeing.">
+{% endblock %}
+
+{% block og_title %}About Lisa | Luna Moth{% endblock %}
+{% block og_description %}Lisa Vernelle is a menstruality mentor and yoga guide offering women’s support with depth and integrity.{% endblock %}
+
+{% block twitter_title %}About Lisa | Luna Moth{% endblock %}
+{% block twitter_description %}Learn more about Lisa, a trained menstruality mentor and yoga practitioner based in Worthing.{% endblock %}
+
+{% block content %}
+    <section class="about-me">
+        <h2>About Me</h2>
+
+        <!-- Profile Picture -->
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/Yoga.jpg') }}" alt="Lisa Vernelle"  width="608" height="811">
+        </div>
+
+        <p>
+            I’m a trained Red School menstruality mentor, having completed the Menstruality Leadership Programme in 2022 
+            and Menopause the Great Awakener trainings in 2023 and 2024.  
+        </p>
+
+        <p>
+            I am an active voluntary contributor to their graduate online community. 
+            I’ve organised an in-person regional meet-up for graduates and participate in regular trainings and facilitation CPD.
+        </p>
+
+        <p>
+            <strong>Learn more about my work:</strong> 
+            <a href="https://www.redschool.net/graduates/lisa-vernelle" target="_blank">Red School Graduate Profile</a>
+        </p>
+
+        <!-- Certificate Image -->
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/Lisa Vernelle-1.png') }}" alt="Menstruality Mentor Certificate" width="608" height="430">
+        </div>
+    </section>
+{% endblock %}
