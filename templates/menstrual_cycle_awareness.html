@@ -1,29 +1,94 @@
 {% extends "base.html" %}
 
-{% block title %}Menstrual Cycle Awareness - Luna Moth{% endblock %}
+{% block title %}Book a Session - Luna Moth{% endblock %}
 
 {% block meta_description %}
-<meta name="description" content="Learn to live in rhythm with your menstrual cycle through Luna Moth's circles, mentoring, and teachings." />
+<meta name="description" content="Book your place in a women's menstruality circle with Lisa. Spaces are limited—reserve your spot today." />
 {% endblock %}
 
-{% block og_title %}Menstrual Cycle Awareness | Luna Moth{% endblock %}
-{% block og_description %}Deepen your connection with your cycle through awareness, circles, and embodied teachings.{% endblock %}
+{% block og_title %}Book a Circle | Luna Moth{% endblock %}
+{% block og_description %}Reserve your place in Luna Moth's menstrual awareness circle. Limited spaces available.{% endblock %}
 
-{% block twitter_title %}Cycle Awareness Work | Luna Moth{% endblock %}
-{% block twitter_description %}Live in alignment with your menstrual cycle. Learn and transform through cyclical awareness.{% endblock %}
+{% block twitter_title %}Book Your Session – Luna Moth{% endblock %}
+{% block twitter_description %}Join a monthly circle of feminine wisdom and transformation. Book your place now.{% endblock %}
 
 {% block content %}
-    <section class="menstrual-awareness-section">
-        <h1>Menstrual Cycle Awareness</h1>
+<section class="booking-widget-section">
+    <h2>◆ Women's Menstrual Cycle Awareness Circle ◆</h2>
 
-        <!-- Image -->
-        <div class="menstrual-image">
-            <img src="{{ url_for('static', filename='images/hands.jpg') }}" alt="Menstrual Cycle Awareness">
+    <p><strong>Facilitated by:</strong> Lisa at Luna Moth</p>
+    <p><strong>Course Length:</strong> 7 monthly sessions, May – December 2025 (plus optional taster)</p>
+    <p><strong>Location & Time:</strong> Monthly Fridays · 7:00pm – 9:00pm · Worthing</p>
+
+    <h3>About the Course</h3>
+    <p>
+        A face-to-face, intimate circle for women to deepen into menstruality and conscious menopause transition. Guided by Red School trained mentor Lisa, this space supports transformation, healing, and awareness. Each session includes guided meditation and embodied reflection.
+    </p>
+    <p>
+        This course is for women aged 20s–50s, cycling or in perimenopause/menopause, whether or not they have a womb. Ideal for those with cycle charting experience or who have attended intro sessions and wish to go deeper.
+    </p>
+
+    <h3>Course Commitment</h3>
+    <p>
+        You are asked to commit to at least 5 of the 7 core sessions. Payment is made upfront by selecting which dates you can attend and choosing your rate from a sliding scale:
+        <ul>
+            <li>£15 – community rate</li>
+            <li>£20 – standard rate</li>
+            <li>£25 – generous rate</li>
+        </ul>
+        Additional sessions can be topped up individually. Cash payments also accepted in person.
+    </p>
+
+    <h3>Key Dates</h3>
+    <ul>
+        <li>4th April 2025: Optional Taster</li>
+        <li>2nd May 2025</li>
+        <li>13th June 2025</li>
+        <li>11th July 2025</li>
+        <li>19th September 2025</li>
+        <li>17th October 2025</li>
+        <li>14th November 2025</li>
+        <li>12th December 2025</li>
+    </ul>
+
+    <p>
+        Group limited to 10 participants to maintain intimacy and trust.
+    </p>
+
+    <p><em>The Luna Moth symbolises transformation, intuition, and the divine feminine. Let this circle be your space for renewal and connection. ⭕</em></p>
+
+    <div class="eventbrite-wrapper">
+        <div id="eventbrite-loading" class="eventbrite-loading">
+            <div class="spinner"></div>
+            <p>Loading booking options...</p>
         </div>
 
-        <!-- Coming Soon Text -->
-        <p class="menstrual-text">
-            🌕 More content is coming to this page soon. Stay tuned for insights, resources, and support around menstrual cycle awareness and wellbeing.
-        </p>
-    </section>
+        <div id="eventbrite-widget-container-1264820635569"></div>
+    </div>
+
+    <script src="https://www.eventbrite.co.uk/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+        window.EBWidgets.createWidget({
+            widgetType: 'checkout',
+            eventId: '1264820635569',
+            iframeContainerId: 'eventbrite-widget-container-1264820635569',
+            iframeContainerHeight: 500,
+            onOrderComplete: function() {
+                console.log('Order complete!');
+            }
+        });
+
+        const iframeCheck = setInterval(() => {
+            const iframe = document.querySelector('#eventbrite-widget-container-1264820635569 iframe');
+            if (iframe) {
+                iframe.addEventListener('load', () => {
+                    setTimeout(() => {
+                        document.getElementById('eventbrite-loading').style.display = 'none';
+                    }, 0);
+                });
+                clearInterval(iframeCheck);
+            }
+        }, 100);
+    </script>
+</section>
 {% endblock %}

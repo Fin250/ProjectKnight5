@@ -12,14 +12,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request.url }}" />
     <meta property="og:title" content="{% block og_title %}Luna Moth – Menstrual Awareness & Yoga{% endblock %}" />
-    <meta property="og:description" content="{% block og_description %}Luna Moth is a sanctuary for menstrual awareness, yoga, and connection.{% endblock %}" />
-    <meta property="og:image" content="{{ url_for('static', filename='images/social-share.jpg', _external=True) }}" />
-
+    <meta property="og:description" content="{% block og_description %}Luna Moth offers menstrual awareness circles, yoga, and soulful support for women in Worthing and beyond.{% endblock %}" />
+    <meta property="og:image" content="{{ url_for('static', filename='images/lunamothbackground.png', _external=True) }}" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{% block twitter_title %}Luna Moth – Feminine Wisdom & Cyclical Living{% endblock %}" />
     <meta name="twitter:description" content="{% block twitter_description %}Join a space of feminine renewal with menstrual circles, yoga, and tarot.{% endblock %}" />
-    <meta name="twitter:image" content="{{ url_for('static', filename='images/social-share.jpg', _external=True) }}" />
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/lunamothbackground.png', _external=True) }}" />
     
     <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico"/>
     <title>{% block title %}Luna Moth{% endblock %}</title>
@@ -49,9 +48,7 @@
                 <li class="divider">|</li>
                 <li><a href="{{ url_for('yoga') }}" class="{% if request.path == url_for('yoga') %}active-link{% endif %}">Yoga</a></li>
                 <li class="divider">|</li>
-                <li><a href="{{ url_for('events') }}" class="{% if request.path == url_for('events') %}active-link{% endif %}">Events</a></li>
-                <li class="divider">|</li>
-                <li><a href="{{ url_for('bookings') }}" class="{% if request.path == url_for('bookings') %}active-link{% endif %}">Bookings</a></li>
+                <li><a href="{{ url_for('tarot') }}" class="{% if request.path == url_for('tarot') %}active-link{% endif %}">Tarot</a></li>
                 <li class="divider">|</li>
                 <li><a href="{{ url_for('about') }}" class="{% if request.path == url_for('about') %}active-link{% endif %}">About Me</a></li>
                 <li class="divider">|</li>

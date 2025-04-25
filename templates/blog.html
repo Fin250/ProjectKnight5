@@ -13,13 +13,7 @@
 {% block twitter_description %}Explore writing on menstruality, intuition, and cyclical living with Luna Moth.{% endblock %}
 
 {% block content %}
-    <div class="subscribe-container">
-        <a href="https://lisalunamoth.substack.com/subscribe" target="_blank" class="subscribe-button">
-            Subscribe to My Newsletter
-        </a>
-    </div>
-
-    <h2>Latest Blog Posts</h2>
+    <h2 class="blog-page">Latest Blog Posts</h2>
     
     <div class="blog-container">
         {% for post in posts %}
@@ -49,4 +43,9 @@
             <a href="{{ url_for('blog', page=page+1) }}" class="next">Next</a>
         {% endif %}
     </div>
+<div class="subscribe-container">
+    <a href="https://lisalunamoth.substack.com/subscribe" target="_blank" class="subscribe-button">
+        Subscribe to My Newsletter
+    </a>
+</div>
 {% endblock %}

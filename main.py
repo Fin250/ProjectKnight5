@@ -30,14 +30,6 @@ def tarot():
 def yoga():
     return render_template("yoga.html")
 
-@app.route("/events")
-def events():
-    return render_template("events.html")
-
-@app.route("/bookings")
-def bookings():
-    return render_template("bookings.html")
-
 @app.route("/about")
 def about():
     return render_template("about.html")

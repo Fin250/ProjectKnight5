@@ -24,7 +24,7 @@
         <p>A warm welcome from Lisa at Luna Moth, your community face to face space
             for transformation and healing. As a trained menstrual cycle awareness
             mentor and facilitator with Red School, I’m offering a monthly 7 session
-            sequential course starting 5th May 2025, with a taster on 4th April 2025.</p>
+            sequential course starting 2nd May 2025, with a taster on 4th April 2025.</p>
         
         <p>I’m a trained Red School menstruality mentor, having completed the Menstruality Leadership programme in 2022 and Menopause the Great Awakener trainings in 2023 and 2024.  I am an active voluntary contributor to their graduate online community. I’ve organised an in person regional meet up for graduates and participate in regular trainings and facilitation CPD. 
 </p>
@@ -46,12 +46,12 @@
             </div>
         </a>
 
-        <!-- Events -->
-        <a href="{{ url_for('events') }}" class="service-link">
+        <!-- Menstrual Cycle Awareness -->
+        <a href="{{ url_for('menstrual_cycle_awareness') }}" class="service-link">
             <div class="service-item">
                 <img src="{{ url_for('static', filename='images/Events.jpg') }}" alt="Events" class="service-image">
-                <h3>Events</h3>
-                <p>Join my events designed to inspire and empower. From wellness workshops to spiritual gatherings, these events provide a space to learn, grow, and connect with like-minded individuals. Stay tuned for upcoming events!</p>
+                <h3>Menstrual Cycle Awareness</h3>
+                <p>A face-to-face, intimate circle for women to deepen into menstruality and conscious menopause transition. Each session includes guided meditation and embodied reflection, supporting transformation, healing, and awareness.</p>
             </div>
         </a>
 
@@ -79,31 +79,33 @@
 <section id="testimonials" class="testimonials-section">
     <h2>What My Clients Say</h2>
 
-    <div class="testimonial-carousel">
-        <div class="testimonials-wrapper">
-            <div class="testimonial-item">
-                <p>"Lisa generously shares the fruits of her extensive and ongoing Red School training with the women she supports in her groups, retreats and drop-in sessions. She has a magical ability to hold space for women, and teaches authentically and from the heart. I've found her work around the inner critic and menstrual cycle awareness instrumental in helping my own menopause transition. If you're interested in learning more about how you can work with your cycle, not against it, Lisa is your girl!"</p>
-                <p><strong>- Rachel Boon, BSc (Hons) Women's Health Specialist Naturopath & Herbalist in Worthing</strong></p>
-            </div>
-            <div class="testimonial-item">
-                <p>"Everything I’ve done with Lisa has been both brilliant and insightful (tarot readings, menstrual cycle awareness, retreat day, circles).
+    <div class="testimonial-container">
+        <div class="testimonial-carousel">
+            <div class="testimonials-wrapper">
+                <div class="testimonial-item">
+                    <p>"Lisa generously shares the fruits of her extensive and ongoing Red School training with the women she supports in her groups, retreats and drop-in sessions. She has a magical ability to hold space for women, and teaches authentically and from the heart. I've found her work around the inner critic and menstrual cycle awareness instrumental in helping my own menopause transition. If you're interested in learning more about how you can work with your cycle, not against it, Lisa is your girl!"</p>
+                    <p><strong>- Rachel Boon, BSc (Hons) Women's Health Specialist Naturopath & Herbalist in Worthing</strong></p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Everything I’ve done with Lisa has been both brilliant and insightful (tarot readings, menstrual cycle awareness, retreat day, circles).
 
-            Lisa is extremely knowledgeable and full of wisdom (in general) but especially around how we can harness the power of our menstrual cycle and beyond, into menopause.
+                    Lisa is extremely knowledgeable and full of wisdom (in general) but especially around how we can harness the power of our menstrual cycle and beyond, into menopause.
 
-            She has a gentle intuitive way and holds space beautifully, making everything accessible - highly recommend."</p>
-                <p><strong>- Lucy (Worthing)</strong></p>
+                    She has a gentle intuitive way and holds space beautifully, making everything accessible - highly recommend."</p>
+                    <p><strong>- Lucy (Worthing)</strong></p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Empowering women through cycle awareness, self-care, and intuitive guidance.
+                    Lisa creates a safe, nurturing space for women to connect with their bodies and cycles. Her guidance in menstrual tracking has transformed my understanding of my emotions, relationships, and well-being. She’s helped me prepare for perimenopause with confidence and embrace my cycle as a source of wisdom. Every session is calming, insightful, and empowering—I highly recommend Lisa's Luna Moth Menstrual Cycle Awareness Course for any woman on this journey."</p>
+                    <p><strong>- Jenn T</strong></p>
+                </div>
             </div>
-            <div class="testimonial-item">
-                <p>"Empowering women through cycle awareness, self-care, and intuitive guidance.
-                Lisa creates a safe, nurturing space for women to connect with their bodies and cycles. Her guidance in menstrual tracking has transformed my understanding of my emotions, relationships, and well-being. She’s helped me prepare for perimenopause with confidence and embrace my cycle as a source of wisdom. Every session is calming, insightful, and empowering—I highly recommend Lisa's Luna Moth Menstrual Cycle Awareness Course for any woman on this journey."</p>
-                <p><strong>- Jenn T</strong></p>
-            </div>
-        </div>
 
-        <div class="carousel-controls">
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-            <div class="carousel-dots" id="carousel-dots"></div>
-            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel-dots" id="carousel-dots"></div>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
         </div>
     </div>
 </section>
@@ -112,7 +114,7 @@
 <section id="booking" class="booking-section">
     <h2>✧◈ Book a Session ◈✧</h2>
     <p>If you’re ready to get started or have any questions, please feel free to book a session with me using the link below.</p>
-    <a href="{{ url_for('bookings') }}" class="btn-book">Book Now</a>
+    <a href="{{ url_for('menstrual_cycle_awareness') }}" class="btn-book">Book Now</a>
 </section>
 
 <script>
