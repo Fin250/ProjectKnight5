@@ -6,7 +6,6 @@ from flask import (
 import feedparser
 import random
 
-
 app = Flask(__name__)
 
 def get_event_id():
@@ -92,20 +91,29 @@ def page_not_found(error):
 @app.route("/id", methods=["GET", "POST"])
 def id():
     if request.method == "POST":
-        new_id = request.form.get('new_id', '').strip()
         password = request.form.get("password", '')
 
-        if password == "freeing" and new_id.isdigit():
-            with open("event_id.txt", "w") as f:
-                f.write(new_id)
-            message = "Event ID updated successfully!"
+        if password == "freeing":
+            if request.form.get("revert") == "true":
+                new_id = "1264820635569"
+            else:
+                new_id = request.form.get('new_id', '').strip()
+
+            if new_id.isdigit():
+                with open("event_id.txt", "w") as f:
+                    f.write(new_id)
+                message = "Event ID updated successfully!"
+            else:
+                message = "Invalid Event ID. Please make sure it's a valid number."
+
         else:
-            message = "Incorrect password or invalid Event ID. Try again."
+            message = "Incorrect password. Try again."
 
         return render_template("id.html", message=message)
 
     return render_template("id.html")
 
+
 # Run app
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

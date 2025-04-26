@@ -24,7 +24,7 @@
     <form method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
         <div>
             <label for="new_id">New Event ID:</label><br>
-            <input type="text" id="new_id" name="new_id" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <input type="text" id="new_id" name="new_id" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
         </div>
 
         <div>
@@ -33,6 +33,8 @@
         </div>
 
         <button type="submit" class="btn-book" style="width: 100%;">Update Event ID</button>
+
+        <button type="submit" name="revert" value="true" class="btn-book" style="width: 100%; margin-top: 10px; background-color: red;">Revert to Default ID</button>
     </form>
 </section>
 {% endblock %}
