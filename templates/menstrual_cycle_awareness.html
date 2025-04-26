@@ -63,15 +63,15 @@
             <p>Loading booking options...</p>
         </div>
 
-        <div id="eventbrite-widget-container-1264820635569"></div>
+        <div id="eventbrite-widget-container"></div>
     </div>
 
     <script src="https://www.eventbrite.co.uk/static/widgets/eb_widgets.js"></script>
     <script type="text/javascript">
         window.EBWidgets.createWidget({
             widgetType: 'checkout',
-            eventId: '1264820635569',
-            iframeContainerId: 'eventbrite-widget-container-1264820635569',
+            eventId: '{{ event_id }}',
+            iframeContainerId: 'eventbrite-widget-container',
             iframeContainerHeight: 500,
             onOrderComplete: function() {
                 console.log('Order complete!');
@@ -79,7 +79,7 @@
         });
 
         const iframeCheck = setInterval(() => {
-            const iframe = document.querySelector('#eventbrite-widget-container-1264820635569 iframe');
+            const iframe = document.querySelector('#eventbrite-widget-container iframe');
             if (iframe) {
                 iframe.addEventListener('load', () => {
                     setTimeout(() => {

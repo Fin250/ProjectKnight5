@@ -9,6 +9,13 @@ import random
 
 app = Flask(__name__)
 
+def get_event_id():
+    try:
+        with open("event_id.txt", "r") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return "1264820635569"
+
 # Routes
 @app.route("/")
 def home():
@@ -20,7 +27,8 @@ def menopause_support():
 
 @app.route("/menstrual-cycle-awareness")
 def menstrual_cycle_awareness():
-    return render_template("menstrual_cycle_awareness.html")
+    event_id = get_event_id()
+    return render_template("menstrual_cycle_awareness.html", event_id=event_id)
 
 @app.route("/tarot")
 def tarot():
@@ -81,6 +89,22 @@ def blog():
 def page_not_found(error):
     return render_template("404.html"), 404
 
+@app.route("/id", methods=["GET", "POST"])
+def id():
+    if request.method == "POST":
+        new_id = request.form.get('new_id', '').strip()
+        password = request.form.get("password", '')
+
+        if password == "freeing" and new_id.isdigit():
+            with open("event_id.txt", "w") as f:
+                f.write(new_id)
+            message = "Event ID updated successfully!"
+        else:
+            message = "Incorrect password or invalid Event ID. Try again."
+
+        return render_template("id.html", message=message)
+
+    return render_template("id.html")
 
 # Run app
 if __name__ == "__main__":

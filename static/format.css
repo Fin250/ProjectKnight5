@@ -780,7 +780,7 @@ h1, h2, h3 {
     margin-top: 30px;
 }
 
-#eventbrite-widget-container-1264820635569 {
+#eventbrite-widget-container {
     margin-top: 40px;
 }
 
@@ -1374,7 +1374,7 @@ h1, h2, h3 {
     }
 }
 
-#eventbrite-widget-container-1264820635569 {
+#eventbrite-widget-container {
     display: block !important;
     width: 100% !important;
     max-width: 100%;
@@ -1386,7 +1386,7 @@ h1, h2, h3 {
     position: relative;
 }
 
-#eventbrite-widget-container-1264820635569 iframe {
+#eventbrite-widget-container iframe {
     display: block !important;
     width: 100% !important;
     height: 500px !important;

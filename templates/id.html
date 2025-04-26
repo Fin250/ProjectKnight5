@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Update Event ID – Luna Moth{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Admin page for updating Eventbrite ID for Luna Moth events." />
+{% endblock %}
+
+{% block og_title %}Update Event ID | Luna Moth{% endblock %}
+{% block og_description %}Admin area for updating Eventbrite booking information.{% endblock %}
+{% block twitter_title %}Update Eventbrite ID – Luna Moth{% endblock %}
+{% block twitter_description %}Internal admin page for updating Eventbrite ID.{% endblock %}
+
+{% block content %}
+<section class="booking-widget-section">
+    <h2>Update Eventbrite Event ID</h2>
+
+    {% if message %}
+        <p style="color: {% if 'Incorrect' in message %}red{% else %}green{% endif %}; font-weight: bold;">
+            {{ message }}
+        </p>
+    {% endif %}
+
+    <form method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+        <div>
+            <label for="new_id">New Event ID:</label><br>
+            <input type="text" id="new_id" name="new_id" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+
+        <button type="submit" class="btn-book" style="width: 100%;">Update Event ID</button>
+    </form>
+</section>
+{% endblock %}
